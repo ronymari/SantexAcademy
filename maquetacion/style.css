@@ -1,0 +1,57 @@
+
+.introduction {
+  padding: 50px 250px 0px ;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+body {
+    margin: 20;
+    font-family: sans-serif;
+  }
+  p {
+    margin-right: 40px;
+  }
+  h1 {
+    margin: 0px 400px;
+    text-align: center;
+  }
+ 
+  button.redondo {
+    
+    border: 1px solid black;
+    border-radius: 25px;
+    border-width: 2px;
+    padding: 0px 20px;
+    height: 32px;
+}
+  
+  button.negro {
+    background-color: rgb(255, 255, 255);
+    color: rgb(3, 3, 3);
+    transition: background-color 0.3s ease;
+  }
+  
+  button.violeta {
+    background-color: white;
+    color: rgb(10, 9, 9);
+  }
+  
+  button.redondo:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(248, 244, 244);
+  }
+  
+  button.violeta:hover {
+    background-color: #6b53f0;
+    border: 2px solid #6b53f0;
+    color: white;
+  }
+  
+
+  div#introduction-actions {
+    display: flex;
+    justify-content: center;
+  }
+  
