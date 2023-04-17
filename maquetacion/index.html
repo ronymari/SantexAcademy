@@ -1,38 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:description" content="Somos una Fundación dedicada a mejorar la calidad de vida de las personas y su entorno, a través de la tecnología."/>
     <title>Xacademy Clase 1 maquetacion</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav>
+        <div id="nav">
+          <div id="nav_left">
+            <a href="./index.html"><img src="logo.svg" /></a>
+          </div>
+          <div id="nav_right" style="float: right;">
+            <ul style="display: flex;">
+              <li><a href="#" target="_blank">Nosotros</a></li>
+              <li><a href="#" target="_blank">Programas</a></li>
+              <li><a href="#" target="_blank">Capacitaciones</a></li>
+              
+              <li><a href="#" target="_blank">Alianzas</a></li>
+              <li style="margin-right: 20px;"><a href="https://technologywithpurpose.org/nosotros/" target="_blank">Contacto</a></li>
+              <div id="sumate">
+                <a href="https://donaronline.org/technology-with-purpose-foudation/sumate-genera-impacto" target="_blank"><button class="nav_negro">Sumate +</button></a>
+            </div>
+            <div class="redes">
+                <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+            </ul>
+            
+            
+          </div>
+        </div>
+      </nav>
+      
 
-    
-</head>
-<body>
-    <div id="header" style="border-bottom: 1px solid gray; display: flex; padding: 10px 100px; justify-content: space-between">
-        <div id="header-left">
-            <img src="logo.svg">
-        </div>
-        <div id="header-right" style="display: flex; align-items: center;">
-            <p>Nosotros</p>
-            <p>Programas</p>
-            <p>Capaciontaciones</p>
-            <p>Alianzas</p>
-            <p>Contacto</p>
-            <button class="redondo negro">Sumate +</button>
-        </div>
+    <div id="introduction">
+      <div id="introduction-text">
+        <h1>
+          Somos una Fundación dedicada a mejorar <br> la calidad de vida de las personas y su
+          <br />
+          entorno, a través de la tecnología.
+        </h1>
+      </div>
+      <div class="contb">
+        <a href="https://technologywithpurpose.org/contacto/" target="_blank"><button class="negro">Contactanos <i class="fas fa-arrow-right"></i></button></a>
+        <a href="https://donaronline.org/technology-with-purpose-foudation/sumate-genera-impacto" target="_blank"><button class="violeta">Sumate <i class="fas fa-plus"></i></button></a>
+
+       
+      </div>
     </div>
-    <div id="introduction" style="padding: 0px;">
-        <div id="introduction-text">
-            <h1>Somos una Fundación dedicada a mejorar <br>
-                la calidad de vida de las personas y su <br>
-                entorno, a través de la tecnología.</h1>
+    <div id="impacto" style="background-color: #201b24;">
+        <div class="presen">
+            <h2>Impacto</h2>
+        <p>Buscamos construir alianzas y fortalecer vínculos para <br>
+            generar una transformación real en la comunidad. <br>
+            Trabajamos para acercar la tecnología innovadora y <br>
+            disruptiva del sector privado hacia el sector social.</p>
+
         </div>
-        <div id="introduction-actions" style="margin-top: 25px;">
-            <button class="redondo negro">Contactanos -></button>
-            <button class="redondo violeta" style="margin-left: 14px;">Sumate +</button>
+        <div class="cont_num">
+            <p id="localidades">0</p>
+        <p>Localidades</p>
+        <p id="mentores">0</p>
+        <p>Mentores</p>
+        <p id="participantes">0</p>
+        <p>Participantes</p>
         </div>
-    </div>
-</body>
+        
+      </div>
+      
+      <script>
+        const localidades = 58; // reemplazar con el valor deseado
+        const mentores = 301; // reemplazar con el valor deseado
+        const participantes = 50; // reemplazar con el valor deseado
+      
+        const incrementarContador = (elemento, valorFinal, tiempo) => {
+          let valorActual = 0;
+          const intervalo = Math.ceil(tiempo / valorFinal);
+          const intervalID = setInterval(() => {
+            valorActual++;
+            elemento.textContent = valorActual;
+            if (valorActual === valorFinal) {
+              clearInterval(intervalID);
+            }
+          }, intervalo);
+        }
+      
+        const localidadesElemento = document.getElementById("localidades");
+        const mentoresElemento = document.getElementById("mentores");
+        const participantesElemento = document.getElementById("participantes");
+      
+        incrementarContador(localidadesElemento, localidades, 200);
+        incrementarContador(mentoresElemento, mentores, 300);
+        incrementarContador(participantesElemento, participantes, 400);
+      </script>
+      
+  </body>
 </html>
